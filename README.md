@@ -1,2 +1,2 @@
-# AWS_ml_engineer_nanodegree_capstone_project
+# Detecting Synthetic Images in AWS SageMaker
 Capstone project for the AWS Machine Learning Engineer Nanodegree

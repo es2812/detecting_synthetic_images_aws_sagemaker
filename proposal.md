@@ -71,3 +71,16 @@ $\text{Accuracy} = \frac{\text{correctly classified observations}}{\text{total o
 Also of relevance, we will analyse the **Recall** of the model, that is, what percentage of real images are labeled correctly. A low Recall indicates the presence of many false-negatives, or images that are real but incorrectly identified as 'fake':
 
 $\text{Recall} = \frac{\text{True positives}}{\text{True positives} + \text{False negatives}}$
+
+## Project Design
+
+The project will be performed in its entirety in AWS, within the Cloud Console provided by Udacity as part of the AWS Machine Learning Nanodegree.
+
+I will use Sagemaker Notebooks to read data, upload it to S3, and create a Hyperparameter Tuning job based on an estimator defined in a separate Python file.
+
+After obtaining the optimal Hyperparameters, I will train an estimator employing multi-instance training, and deploy it to a SageMaker endpoint.
+
+I will leverage this endpoint in an architecture that will trigger the classification of an image when it is uploaded to a certain bucket of S3. This image will be prepared and serialized and passed to the classifier, which will output a prediction. If this passes a specified threshold, the last Lambda function will trigger an error. This simulates a project which can be used for the automatic flagging of an image as fake when it is uploaded to a system.
+
+The proposed architecture is the following:
+![Proposed Project Architecture](img/proposed_architecture.png)

@@ -1,3 +1,7 @@
+# Dataset
+src/*.zip
+src/cifake/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

@@ -1,0 +1,3 @@
+loguru
+smdebug
+numpy<2.0.0

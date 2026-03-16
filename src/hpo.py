@@ -203,7 +203,6 @@ def create_data_loaders(data_dir: str, batch_size: int) -> tuple[DataLoader, dic
     """
     transformer = transforms.Compose(
         [
-            #transforms.Resize((299, 299)), #inception_v3 image size
             transforms.ToTensor(),
             transforms.Normalize(
                 mean=[0.485, 0.456, 0.406],
@@ -218,11 +217,11 @@ def create_data_loaders(data_dir: str, batch_size: int) -> tuple[DataLoader, dic
     return data_loader, data.class_to_idx
 
 
-def net() -> models.Inception3:
+def net():
     """Returns the model to train and test.
 
     Returns:
-        models.Inception3: A modified version of the VGG19 pre-trained model
+        models: A modified version of the VGG19 pre-trained model
             with an output of 1 neuron.
     """
     model = models.vgg19_bn(pretrained=True)

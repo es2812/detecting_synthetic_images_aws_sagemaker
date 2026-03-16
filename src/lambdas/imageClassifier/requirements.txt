@@ -1,0 +1,6 @@
+boto3
+protobuf==3.20.0
+torch==1.12.1
+torchvision
+numpy<2.0.0
+pillow

@@ -8,13 +8,18 @@ This project is motivated by the raise of Generative AI, and the rapid improveme
 
 ## Project Setup
 The project consists of the following files:
-- `train_and_deploy.ipynb`: this notebook contains all the step for dataset analysis, hyperparameter tuning, training of the final model, and deployment of the endpoint.
-- `hpo.py`: this Python code contains the creation, training and testing of a fined-tuned Inception v3 neural network, using hyperparameters given from the arguments.
-- `train_model.py`: this Python code contains the creation, training and testing of a fined-tuned Inception v3 neural network, using hyperparameters given from the arguments, and adding a hook for the Sagemaker Profiler and Debugger. 
-- `requirements.txt`: this file contains the requirements for the hpo and train_model Python files. This is required since the notebook launches the training jobs in a new machine which doesn't have all requirements installed. This file tells Sagemaker which Python libraries to install.
-- `README.md`: a comprehensive documentation of the project.
+- `proposal/`: folder that contains the markdown and pdf of the proposal for the project.
+- `src/`: folder that contains all source data for the project.
+    - `train_and_deploy.ipynb`: this notebook contains all the step for dataset analysis, hyperparameter tuning, training of the final model, and deployment of the endpoint.
+    - `hpo.py`: this Python code contains the creation, training and testing of a fined-tuned VGG neural network, using hyperparameters given from the arguments.
+    - `train_model.py`: this Python code contains the creation, training and testing of a fined-tuned VGG neural network, using hyperparameters given from the arguments, and adding a hook for the Sagemaker Profiler and Debugger. 
+    - `requirements.txt`: this file contains the requirements for the hpo and train_model Python files. This is required since the notebook launches the training jobs in a new machine which doesn't have all requirements installed. This file tells Sagemaker which Python libraries to install.
+    - `lambdas/`: folder that contains the source code for the lambda functions, one folder for each function, and the requirements and Dockerfile for the imageClassifier.
+        - `execution-detail.json`: definition of the Step Functions workflow.
+- `README.md`: a basic documentation of this project.
+- `report.md`/`report.pdf`: a comprehensive report of this project.
 
-To run this project completely, we only have to execute all the steps in the `train_and_deploy` notebook.
+To create and train the model in this project, we have to execute all the steps in the `train_and_deploy` notebook.
 
 ## Libraries/Frameworks used
 

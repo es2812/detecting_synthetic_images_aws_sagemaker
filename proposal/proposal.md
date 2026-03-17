@@ -1,5 +1,5 @@
 ---
-title: Detecting Synthetic Images in AWS Sagemaker
+title: Detecting Synthetic Images in AWS Sagemaker - Proposal
 date: 2026-03-11
 authors:
     - name: Esther Cuervo

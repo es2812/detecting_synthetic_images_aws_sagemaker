@@ -17,7 +17,7 @@ The project consists of the following files:
     - `lambdas/`: folder that contains the source code for the lambda functions, one folder for each function, and the requirements and Dockerfile for the imageClassifier.
         - `execution-detail.json`: definition of the Step Functions workflow.
 - `README.md`: a basic documentation of this project.
-- `report.md`/`report.pdf`: a comprehensive report of this project.
+- `report/`: a comprehensive report of this project.
 
 To create and train the model in this project, we have to execute all the steps in the `train_and_deploy` notebook.
 
